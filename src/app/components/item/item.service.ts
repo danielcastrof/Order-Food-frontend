@@ -35,7 +35,7 @@ export class ItemService {
   }
 
   delete(id: string): Observable<Item> {
-    var headers = new HttpHeaders().set('Content-Type', 'text/plain; charset=utf-8');
+    const headers = new HttpHeaders().set('Content-Type', 'text/plain; charset=utf-8');
     return this.http.delete<Item>(`${apiUrl}/${id}`, {headers, responseType: 'text' as 'json'})
   }
 }
