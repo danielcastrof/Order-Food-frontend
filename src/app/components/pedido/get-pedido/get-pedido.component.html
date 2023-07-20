@@ -1,0 +1,45 @@
+<div class="get-pedidos">
+    <table class="table">
+        <thead class="table-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Detalhes do Pedido</th>
+            <th scope="col">Total do Pedido</th>
+            <th scope="col">Mesa</th>
+            <th scope="col">Entregue</th>
+            <th scope="col">Pago</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let pedido of listPedidos">
+            <td>{{pedido.id}}</td>
+            <td>
+            <table class="table">
+                <thead class="table-warning">
+                <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">Valor unitário</th>
+                    <th scope="col">Subtotal</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let pedidoItem of pedido.itens">
+                    <td>{{pedidoItem.nome}}</td>
+                    <td>{{pedidoItem.quantidade}}</td>
+                    <td>{{pedidoItem.valorDeVenda | currency: "BRL"}}</td>
+                    <td>{{pedidoItem.valorSubtotal | currency: "BRL"}}</td>
+                  </tr>
+                </tbody>
+            </table>
+            </td>
+            <td>{{pedido.valorTotal | currency: "BRL"}}</td>
+            <td>{{pedido.mesa}}</td>
+            <td>{{pedido.isEntregue}}</td>
+            <td>{{pedido.isPago}}</td>
+            <td>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

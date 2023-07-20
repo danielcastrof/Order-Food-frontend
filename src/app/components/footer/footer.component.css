@@ -1,0 +1,9 @@
+.footer-container {
+    background-color: #0a100d;
+    color: #b9baa3;
+    line-height: 50px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+}

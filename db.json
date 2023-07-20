@@ -1,0 +1,98 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "nome": "Rodeo Burger",
+      "categoria": "Burgers",
+      "descricao": "Pão brioche, maionese da casa, 2 hambúrgueres (150g) de carne Angus, bacon, molho barbecue, queijo prato, alface e tomate",
+      "imagem": "assets/imagem1.png",
+      "valorDeVenda": 19.9,
+      "quantidadeEmEstoque": 49
+    },
+    {
+      "id": 2,
+      "nome": "Porção de fritas",
+      "categoria": "Porções",
+      "descricao": "300g de fritas - acompanha maionese da casa",
+      "imagem": "assets/imagem2.jpg",
+      "valorDeVenda": 15.9,
+      "quantidadeEmEstoque": 54
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "teste@email.com",
+      "password": 1234,
+      "firstname": "João",
+      "lastname": "Silva"
+    },
+    {
+      "firstname": "Pedro",
+      "lastname": "Machado",
+      "email": "pedro@teste.com",
+      "password": "2525",
+      "id": 2
+    },
+    {
+      "firstname": "teste2",
+      "lastname": "teste",
+      "email": "teste2@teste.com",
+      "password": "1111",
+      "id": 3
+    }
+  ],
+  "pedidos": [
+    {
+      "id": 1,
+      "itens": [
+        {
+          "id": 1,
+          "nome": "Rodeo Burger",
+          "categoria": "Burgers",
+          "descricao": "Pão brioche, maionese da casa, 2 hambúrgueres (150g) de carne Angus, bacon, molho barbecue, queijo prato, alface e tomate",
+          "imagem": "assets/imagem1.png",
+          "valorDeVenda": 19.9,
+          "valorSubtotal": 19.9,
+          "quantidadeEmEstoque": 49,
+          "quantidade": 1
+        }
+      ],
+      "valorTotal": 19.9,
+      "mesa": 10,
+      "isEntregue": true,
+      "isPago": false
+    },
+    {
+      "id": 2,
+      "itens": [
+        {
+          "id": 1,
+          "nome": "Rodeo Burger",
+          "categoria": "Burgers",
+          "descricao": "Pão brioche, maionese da casa, 2 hambúrgueres (150g) de carne Angus, bacon, molho barbecue, queijo prato, alface e tomate",
+          "imagem": "assets/imagem1.png",
+          "valorDeVenda": 19.9,
+          "valorSubtotal": 19.9,
+          "quantidadeEmEstoque": 48,
+          "quantidade": 1
+        },
+        {
+          "id": 2,
+          "nome": "Porção de fritas",
+          "categoria": "Porções",
+          "descricao": "300g de fritas - acompanha maionese da casa",
+          "imagem": "assets/imagem2.jpg",
+          "valorDeVenda": 15.9,
+          "valorSubtotal": 31.8,
+          "quantidadeEmEstoque": 54,
+          "quantidade": 2
+        }
+      ],
+      "valorTotal": 51.7,
+      "mesa": 2,
+      "isEntregue": false,
+      "isPago": true
+    }
+  ]
+}

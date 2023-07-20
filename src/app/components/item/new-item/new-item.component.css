@@ -1,0 +1,10 @@
+.form-post-item {
+    margin-top: 7em !important;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.btn-cadastrar {
+    background-color: #0e7c7b;
+    color: #fff;
+}

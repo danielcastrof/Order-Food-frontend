@@ -1,0 +1,55 @@
+<header class="header py-5">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center">
+            <div class="col-lg-2">
+                <img src="https://cdn0.iconfinder.com/data/icons/food-delivery-27/512/food-order-hand-phone-512.png">
+            </div>
+            <div class="title col-lg-10">
+                <h1 class="display-4 text-white mt-5 mb-2">Faça seu pedido de forma prática!</h1>
+                <p class="lead mb-5 text-white">Sinta-se livre para escolher diretamente do cardápio, ou acionar algum funcionário a qualquer momento! </p>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="main">
+    <div class="container main-container">
+        <div class="row text-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card card-image-top" src="https://th.bing.com/th/id/OIP.fHGHFF3mPQmFoLEfpnru6gHaE8?pid=ImgDet&rs=1" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Cardápio</h4>
+                        <p class="card-text">Conheça nossas opções de pratos</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn" [routerLink]="['/menu']">Acessar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card card-image-top" src="https://stories.starbucks.com/wp-content/uploads/2019/01/MOP_Tweet-1.jpg" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Faça seu Pedido</h4>
+                        <p class="card-text">Escolha diretamente do cardápio e receba em sua mesa</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn" [routerLink]="['/pedido/new']">Efetuar Pedido</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card card-image-top" width="304px" height="200px" src="https://th.bing.com/th/id/R.5a0b848291abb56e9ccd44d0571ad648?rik=JuHaAiA4mp21yA&pid=ImgRaw&r=0" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Quem Somos</h4>
+                        <p class="card-text">Conheça um pouco mais sobre nós</p>
+                    </div>
+                    <div class="card-footer">
+                        <a class="btn" [routerLink]="['/about']">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

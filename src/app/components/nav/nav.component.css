@@ -1,0 +1,31 @@
+.navbar {
+    background-color: #0a100d;
+}
+
+#navbarResponsive {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-brand {
+    color: #fc440f;
+    font-style: italic;
+    cursor: pointer;
+}
+
+li {
+    padding: 5px 10px;
+}
+
+.nav-link {
+    color: #b9baa3;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.nav-link:hover {
+    background-color: #fc440f;
+    color: #0a100d;
+    border: transparent;
+    transition: 300ms;
+}
