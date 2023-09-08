@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Item } from './item.model';
 import { Observable } from 'rxjs';
 
-const apiUrl = 'http://localhost:8000/item'
+const apiUrl = 'http://localhost:8000/items/'
 const url = 'http://localhost:8000/'
 
 @Injectable({
@@ -15,6 +15,7 @@ export class ItemService {
   constructor(private http: HttpClient) { }
 
   get(): Observable<Item[]> {
+    console.log(this.http.get<Item[]>(`${apiUrl}`))
     return this.http.get<Item[]>(`${apiUrl}`)
   }
 

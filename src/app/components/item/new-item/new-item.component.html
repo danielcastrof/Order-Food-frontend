@@ -4,30 +4,30 @@
 
         <div class="mb-3">
             <label class="form-label">Nome</label>
-            <input type="text" class="form-control" [(ngModel)]="item.nome" name="input-nome" placeholder="Nome do item">
+            <input type="text" class="form-control" [(ngModel)]="item.name" name="input-nome" placeholder="Nome do item">
         </div>
 
         <div class="mb-3">
             <label class="form-label">Categoria</label>
-            <input type="text" class="form-control" [(ngModel)]="item.categoria" name="input-categoria" placeholder="Adicione a categoria do item">
+            <input type="text" class="form-control" [(ngModel)]="item.category" name="input-categoria" placeholder="Adicione a categoria do item">
         </div>
         <div class="mb-3">
             <label class="form-label">Descrição</label>
-            <textarea class="form-control" [(ngModel)]="item.descricao" name="input-descricao" placeholder="Adicione a descrição do item"></textarea>
+            <textarea class="form-control" [(ngModel)]="item.description" name="input-descricao" placeholder="Adicione a descrição do item"></textarea>
         </div>
         <div class="mb-3">
             <label class="form-label">Url da Imagem</label>
-            <input type="file" class="form-control" [(ngModel)]="item.imagem" name="input-imagem" placeholder="Adicione a URL da imagem">
+            <input type="file" class="form-control" [(ngModel)]="item.url" name="input-imagem" placeholder="Adicione a URL da imagem">
         </div>
 
         <div class="mb-3">
             <label class="form-label">Valor de Venda</label>
-            <input type="number" class="form-control" [(ngModel)]="item.valorDeVenda" name="input-valor" placeholder="R$ 0.00">
+            <input type="number" class="form-control" [(ngModel)]="item.price" name="input-valor" placeholder="R$ 0.00">
         </div>
 
         <div class="mb-3">
             <label class="form-label">Quantidade em Estoque</label>
-            <input type="number" class="form-control" [(ngModel)]="item.quantidadeEmEstoque" name="input-qtd" placeholder="Ex.: 5">
+            <input type="number" class="form-control" [(ngModel)]="item.quantity" name="input-qtd" placeholder="Ex.: 5">
         </div>
         <button class="btn btn-cadastrar" type="submit">Cadastrar</button>
     </form>

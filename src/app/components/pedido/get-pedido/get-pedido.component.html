@@ -25,10 +25,10 @@
                 </thead>
                 <tbody>
                 <tr *ngFor="let pedidoItem of pedido.itens">
-                    <td>{{pedidoItem.nome}}</td>
-                    <td>{{pedidoItem.quantidade}}</td>
-                    <td>{{pedidoItem.valorDeVenda | currency: "BRL"}}</td>
-                    <td>{{pedidoItem.valorSubtotal | currency: "BRL"}}</td>
+                    <td>{{pedidoItem.name}}</td>
+                    <td>{{pedidoItem.quantity}}</td>
+                    <td>{{pedidoItem.price | currency: "BRL"}}</td>
+                    <!-- <td>{{pedidoItem.valorSubtotal | currency: "BRL"}}</td> -->
                   </tr>
                 </tbody>
             </table>

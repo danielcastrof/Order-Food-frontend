@@ -12,25 +12,28 @@
     <div class="album bg-light">
       <div class="container">
   
-        <div *ngFor="let item of listItems" class="main-card col-md-4">
-          <div class="col">
-            <div class="card shadow-sm">
-              <img class="card image" [src]="item.imagem" alt="item-image">
-              
-              <div class="card-body">
-                <h3 class="item-name"><i>{{ item.nome }}</i></h3>
-                <p class="card-text">{{ item.descricao }}</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-add">Adicionar ao pedido</button>
-                    <button type="button" class="btn btn-sm btn-del" (click)="deleteItem(item.id)">Excluir Item</button>
+        <div class="row">
+          <div *ngFor="let item of listItems" class="main-card col-md-6">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="card-image" [src]="item.url" alt="item-image">
+                
+                <div class="card-body">
+                  <h3 class="item-name"><i>{{ item.name }}</i></h3>
+                  <p class="card-text">{{ item.description }}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-add">Adicionar ao pedido</button>
+                      <button type="button" class="btn btn-sm btn-del" (click)="deleteItem(item.id)">Excluir Item</button>
+                    </div>
+                    <small class="text-muted">{{ item.price | currency: "BRL"}}</small>
                   </div>
-                  <small class="text-muted">{{ item.valorDeVenda | currency: "BRL"}}</small>
                 </div>
               </div>
-            </div>
-          </div>    
+            </div>    
+          </div>
         </div>
+        
       </div>
   
     </div>

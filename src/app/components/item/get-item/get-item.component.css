@@ -49,6 +49,12 @@
     -webkit-overflow-scrolling: touch;
 }
 
+.card-image {
+    width: 100%; /* Set the width to 100% to make images responsive within the card */
+    height: 28vh; /* Set a fixed height for the card images */
+    object-fit: cover; /* Ensure the image covers the entire card */
+}
+
 .album {
     margin-bottom: 5em;
 }

@@ -40,6 +40,9 @@
       "email": "teste2@teste.com",
       "password": "1111",
       "id": 3
+    },
+    {
+      "id": 4
     }
   ],
   "pedidos": [
