@@ -1,20 +1,22 @@
 <main class="form-signin w-100 m-auto">
-    <form>
-        <img class="mb-4" src="https://cdn0.iconfinder.com/data/icons/food-delivery-27/512/food-order-hand-phone-512.png" alt="" width="72" height="57">
-        <h1 class="h3 mb-3 fw-normal">Faça seu login</h1>
-
-        <div class="form-floating">
-            <input type="email" class="form-control" placeholder="email@exemplo.com">
-            <label for="floatingInput">Email</label>
-        </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" placeholder="Sua senha">
-                <label for="floatingPassword">Senha</label>
-            </div>
-        <button class="w-100 btn btn-lg btn-register mb-3" type="submit">Entrar</button>
-        <p>
-            Novo por aqui? 
-            <a [routerLink]="['/register']">Cadastre-se</a>
-        </p>
+    <form (ngSubmit)="logar()">
+      <img class="mb-4" src="https://cdn0.iconfinder.com/data/icons/food-delivery-27/512/food-order-hand-phone-512.png" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Faça seu login</h1>
+  
+      <div class="form-floating">
+        <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" placeholder="email@exemplo.com">
+        <label for="email">Email</label>
+      </div>
+  
+      <div class="form-floating">
+        <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" placeholder="Sua senha">
+        <label for="password">Senha</label>
+      </div>
+  
+      <button class="w-100 btn btn-lg btn-register mb-3" type="submit">Entrar</button>
+      <p>
+        Novo por aqui? 
+        <a [routerLink]="['/register']">Cadastre-se</a>
+      </p>
     </form>
-</main>
+  </main>

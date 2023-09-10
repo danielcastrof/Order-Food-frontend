@@ -1,24 +1,28 @@
 <main class="form-signin w-100 m-auto">
-    <form (submit)="addUser()">
+    <form (ngSubmit)="addUser()">
         <img class="mb-4" src="https://cdn0.iconfinder.com/data/icons/food-delivery-27/512/food-order-hand-phone-512.png" alt="" width="72" height="57">
         <h1 class="h3 mb-3 fw-normal">Cadastre-se</h1>
 
         <div class="form-floating">
-            <input type="email" class="form-control" placeholder="email@exemplo.com" [(ngModel)]="user.firstname" name="firstname">
+            <input class="form-control" placeholder="João silva" [(ngModel)]="name" name="name">
             <label for="floatingInput">Nome</label>
         </div>
+
         <div class="form-floating">
-            <input type="email" class="form-control" placeholder="email@exemplo.com" [(ngModel)]="user.lastname" name="lastname">
-            <label for="floatingInput">Sobrenome</label>
-        </div>
-        <div class="form-floating">
-            <input type="email" class="form-control" placeholder="email@exemplo.com" [(ngModel)]="user.email" name="email">
+            <input type="email" class="form-control" placeholder="email@exemplo.com" [(ngModel)]="email" name="email">
             <label for="floatingInput">Email</label>
         </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" placeholder="Sua senha" [(ngModel)]="user.password" name="password">
-                <label for="floatingPassword">Senha</label>
-            </div>
+
+        <div class="form-floating">
+            <input class="form-control" placeholder="81 99999-9999" [(ngModel)]="phone" name="phone">
+            <label for="floatingInput">Telefone</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="password" class="form-control" placeholder="Sua senha" [(ngModel)]="password" name="password">
+            <label for="floatingPassword">Senha</label>
+        </div>
+
         <button class="w-100 btn btn-lg btn-register" type="submit">Cadastrar</button>
     </form>
 </main>

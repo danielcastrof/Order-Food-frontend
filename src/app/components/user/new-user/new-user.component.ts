@@ -10,6 +10,10 @@ import { UserService } from '../user.service';
 })
 
 export class NewUserComponent implements OnInit {
+  email: string = '';
+  password: string = '';
+  name: string = '';
+  phone: string = '';
 
   user: User = {} as User;
 
@@ -18,13 +22,24 @@ export class NewUserComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addUser(): void {
-    this.userService.add(this.user).subscribe( userResponse => {
-      this.user = userResponse;
-      alert("Usuário cadastrado com sucesso!");
-      this.router.navigate(['/home']);
-    },
-      error => console.log(error)
+    addUser(): void {
+      this.userService.add(this.user).subscribe( userResponse => {
+        this.user = userResponse;
+        alert("Usuário cadastrado com sucesso!");
+        this.router.navigate(['/home']);
+      },
+        error => console.log(error)
+      );
+
+    this.userService.add({ email: this.email, password: this.password, name: this.name, phone: this.phone, status: true, points: 0 }).subscribe(
+      () => {
+        console.log('Login bem-sucedido!');
+        this.router.navigate(['/home']);
+      },
+      error => {
+        console.log('Erro no login:', error);
+        alert('Falha no login. Verifique suas credenciais.');
+      }
     );
   }
 }
