@@ -13,6 +13,7 @@ import { GetPedidoComponent } from './components/pedido/get-pedido/get-pedido.co
 import { NewPedidoComponent } from './components/pedido/new-pedido/new-pedido.component';
 import { UpdatePedidoComponent } from './components/pedido/update-pedido/update-pedido.component';
 import { NewUserComponent } from './components/user/new-user/new-user.component';
+import { ChatComponent } from './components/chat/chat.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'register', component: NewUserComponent },
   { path: 'login', component: LoginComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'chat', component: ChatComponent },
 
 ];
 

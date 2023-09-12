@@ -17,7 +17,7 @@ export class PedidoService {
   get(): Observable<Pedido[]> {
     return this.http.get<Pedido[]>(apiOrdersUser, {
       headers: {
-        Authorization: 'Bearer '+ window.localStorage.getItem('token')
+        Authorization: 'Bearer ' + window.localStorage.getItem('token')
       }
     })
   }

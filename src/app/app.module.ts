@@ -29,6 +29,8 @@ import { Item } from './components/item/item.model';
 import { UserService } from './components/user/user.service';
 import { ItemService } from './components/item/item.service';
 import { PedidoService } from './components/pedido/pedido.service';
+import { ChatComponent } from './components/chat/chat.component';
+
 
 @NgModule({
   declarations: [
@@ -52,6 +54,7 @@ import { PedidoService } from './components/pedido/pedido.service';
     UpdatePedidoComponent,
     DeletePedidoComponent,
     AboutComponent,
+    ChatComponent,
   ],
   imports: [
     BrowserModule,
