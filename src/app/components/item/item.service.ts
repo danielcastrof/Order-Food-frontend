@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 
 const apiUrl = 'http://localhost:8000/items/'
 const url = 'http://localhost:8000/'
+const url_item_orders = 'http://localhost:8000/item-orders'
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,6 @@ export class ItemService {
   constructor(private http: HttpClient) { }
 
   get(): Observable<Item[]> {
-    console.log(this.http.get<Item[]>(`${apiUrl}`))
     return this.http.get<Item[]>(`${apiUrl}`)
   }
 
@@ -27,8 +27,10 @@ export class ItemService {
     return this.http.post<Item>(`${apiUrl}`, item)
   }
 
-  addToOrder(item: Item): Observable<Item> {
-    return this.http.post<Item>(`${url}/pedidos`, item)
+  addToOrder(item: {}): Observable<Item> {
+    console.log('-------------------------asdd-----------------------------')
+    console.log(item)
+    return this.http.post<Item>(`${url_item_orders}`, item)
   }
 
   update(id: string, item: Item): Observable<Item> {

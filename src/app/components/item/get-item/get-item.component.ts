@@ -14,7 +14,8 @@ export class GetItemComponent implements OnInit {
   @Input() "item": { id?: string, nome: string; categoria: string; descricao: string; imagem: string; valorDeVenda: number; quantidadeEmEstoque: number; };
 
   public "listItems": Item[];
-
+  itemId: string = '';
+  orderId: any;
   constructor(private itemService: ItemService, private route: ActivatedRoute, private router: Router) { }
 
   id = this.route.snapshot.paramMap.get('id')!
@@ -34,6 +35,16 @@ export class GetItemComponent implements OnInit {
       this.router.navigate(['/home']);
     },
       error => console.log(error));
+  }
+
+  addToOrder(itemId?: string): void {
+    console.log('-------------------------asdqwe-----------------------------')
+    console.log(itemId)
+    this.orderId = window.localStorage.getItem('id_order')
+    this.itemService.addToOrder({"itemId": itemId, "orderId": this.orderId, "quantity": 1}).subscribe((t) => {
+      console.log(t)
+    }
+    );
   }
 }
 

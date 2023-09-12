@@ -23,7 +23,7 @@
                   <p class="card-text">{{ item.description }}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-add">Adicionar ao pedido</button>
+                      <button type="button" class="btn btn-sm btn-add" (click)="addToOrder(item.id)">Adicionar ao pedido</button>
                       <button type="button" class="btn btn-sm btn-del" (click)="deleteItem(item.id)">Excluir Item</button>
                     </div>
                     <small class="text-muted">{{ item.price | currency: "BRL"}}</small>

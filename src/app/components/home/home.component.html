@@ -34,7 +34,7 @@
                         <p class="card-text">Escolha diretamente do cardápio e receba em sua mesa</p>
                     </div>
                     <div class="card-footer">
-                        <a class="btn" [routerLink]="['/pedido/new']">Efetuar Pedido</a>
+                        <a (click)="createOrder()"class="btn" [routerLink]="['/menu']">Efetuar Pedido</a>
                     </div>
                 </div>
             </div>

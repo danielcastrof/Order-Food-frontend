@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Pedido } from './pedido.model';
 
 const apiUrl = 'http://localhost:8000/pedidos'
+const apiOrdersUser = 'http://localhost:8000/orders/orderUser'
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,11 @@ export class PedidoService {
   constructor(private http: HttpClient) { }
 
   get(): Observable<Pedido[]> {
-    return this.http.get<Pedido[]>(apiUrl)
+    return this.http.get<Pedido[]>(apiOrdersUser, {
+      headers: {
+        Authorization: 'Bearer '+ window.localStorage.getItem('token')
+      }
+    })
   }
 
   getById(id: number): Observable<Pedido>{

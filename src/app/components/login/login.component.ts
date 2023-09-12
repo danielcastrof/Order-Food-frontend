@@ -10,7 +10,9 @@ import { LoginService } from './login.service';
 export class LoginComponent implements OnInit {
   email: string = '';
   password: string = '';
-
+  acess_token: string = '';
+  token: any;
+  
   constructor(private loginService: LoginService, private router: Router) { }
 
   ngOnInit(): void {
@@ -24,7 +26,9 @@ export class LoginComponent implements OnInit {
     }
 
     this.loginService.logar({ email: this.email, password: this.password }).subscribe(
-      () => {
+      (token) => {
+        this.token = token;
+        window.localStorage.setItem('token', this.token["access_token"]);
         console.log('Login bem-sucedido!');
         this.router.navigate(['/home']);
       },
